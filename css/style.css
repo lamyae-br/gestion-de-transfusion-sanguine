@@ -1,0 +1,240 @@
+/* === Body et fond général === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #800000, #4d0000); /* Rouge très sombre */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Conteneur principal === */
+#page-container {
+    flex: 1;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* === Titres principaux === */
+h1.text-gradient {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #ff1a1a, #b30000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.6);
+    animation: fadeInDown 1s ease;
+}
+
+/* === Titres secondaires === */
+h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* === Formulaire et Carte coordonnées === */
+.form-card, .info-card {
+    background: #2a2a2a;
+    border: 2px solid #ff1a1a;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+    padding: 35px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
+}
+
+.form-card:hover, .info-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 22px 55px rgba(0,0,0,0.8);
+    border-color: #ff4d4d;
+}
+
+/* === Champs du formulaire === */
+.form-card .form-group {
+    margin-bottom: 22px;
+}
+
+.form-card label {
+    font-weight: 600;
+    color: #ff1a1a;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-card .form-control {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid #555;
+    background: #3b3b3b;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-card .form-control:focus {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 14px rgba(255,26,26,0.6);
+    background: #4a4a4a;
+    outline: none;
+}
+
+/* === Bouton Envoyer === */
+.btn-gradient {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff1a1a, #b30000);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 16px 60px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.7);
+    transition: all 0.35s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #b30000, #ff1a1a);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.85);
+}
+
+/* === Carte coordonnées === */
+.info-card p {
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: #ddd;
+}
+
+.info-card a {
+    color: #ff1a1a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+    color: #ff4d4d;
+    text-decoration: underline;
+}
+
+/* === Alertes === */
+.alert {
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 14px;
+    padding: 15px 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.alert-success {
+    background-color: #1a331a;
+    color: #b6f1b6;
+}
+
+.alert-danger {
+    background-color: #4a1a1a;
+    color: #ff8a8a;
+}
+
+/* === Footer === */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    border-top: 4px solid #ff1a1a;
+    font-size: 14px;
+    box-shadow: 0 -4px 25px rgba(0,0,0,0.7);
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Header amélioré === */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 45px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #ff1a1a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+header h2 {
+    margin: 0;
+    color: #ff1a1a;
+    font-size: 26px;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.35s ease;
+}
+
+.header-nav a:hover {
+    background-color: #ff1a1a;
+    color: #fff;
+    transform: scale(1.06);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .header-nav {
+        margin-top: 12px;
+    }
+    .header-nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .form-card, .info-card {
+        padding: 25px;
+    }
+}
